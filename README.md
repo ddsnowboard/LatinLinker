@@ -2,7 +2,7 @@ LatinLinker
 ===========
 #I'm calling it on this, I have no idea what I'm doing. Maybe if I can think better, I'll be able to do it, but surely not now. 
 
-
+So, where I was was that I was trying to pretty much recreate the LatinLibrary website so I could have all the texts locally on the site itself because javascript can't get outside websites. I had a python script that would do it partially, but there was too much to think about and I couldn't think about it all at once. Maybe another day. 
 A webapp that takes a link to a page from LatinLibrary or similar and shows it with all the words as links to their Whitaker's Words definitions. 
 
 
