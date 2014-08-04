@@ -1,5 +1,7 @@
 LatinLinker
 ===========
+#I'm calling it on this, I have no idea what I'm doing. Maybe if I can think better, I'll be able to do it, but surely not now. 
+
 
 A webapp that takes a link to a page from LatinLibrary or similar and shows it with all the words as links to their Whitaker's Words definitions. 
 
