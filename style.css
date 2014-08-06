@@ -29,8 +29,24 @@
 
 a {
 	text-decoration: none;
+	color: black;
 }
 
-#textbox {
-	width: 200px;
+#entry {
+	margin-top:20px;
+	text-align:center;
+}
+
+table {
+	margin: 1em, 2em, 1em, 2em;
+}
+
+tr {
+	height:1.4em;
+}
+
+td {
+	font-family:"book antiqua","times new roman",times;
+	font-size: 1.4em;
+	padding-left: 30px;
 }
