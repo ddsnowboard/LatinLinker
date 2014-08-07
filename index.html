@@ -6,7 +6,7 @@
         <link type="text/css" rel="stylesheet" href="style.css" />
         <script src="jquery-2.1.1.min.js"></script>
         <script src="master.js"></script>
-		<script src="texts.js"></script>
+        <script src="texts.js"></script>
         <script src="main.js"></script>
     </head>
     <body>
@@ -20,15 +20,15 @@
                     <th>Vergil</th>
                     <th>Caesar</th>
                 </tr>
-                <tr>
+                <tr class="row">
                     <td>Aeneid Book I</td>
                     <td>DBG Book I</td>
                 </tr>
-                <tr>
+                <tr class="row">
                     <td>Aeneid Book II</td>
                     <td>DBG Book IV</td>
                 </tr>
-                <tr>
+                <tr class="row">
                     <td>Aeneid Book IV</td>
                     <td>DBG Book VI</td>
                 </tr>
@@ -39,6 +39,8 @@
         <textarea id="text" rows="30" cols="50"></textarea>
         <br />
         <div id="submit" class="button" style="margin-right: auto; margin-left: auto;">Submit</div></div>
-        <div id="text"></div>
+        <div id="text">
+            <table id="table"></table>
+        </div>
     </body>
 </html>

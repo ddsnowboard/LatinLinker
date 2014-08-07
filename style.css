@@ -45,12 +45,6 @@ tr {
 	height:1.4em;
 }
 
-td {
-	font-family:"book antiqua","times new roman",times;
-	font-size: 1.4em;
-	padding-left: 30px;
-}
-
 .normal {
 	color:blue; 
 	text-decoration: underline;
@@ -60,9 +54,15 @@ th {
 	font-size: 1.5em;
 }
 
-td {
+.row > td {
 	color:blue; 
 	text-decoration: underline;
 	cursor: pointer;
 	font-size: .8em;
+}
+
+td > a {
+	font-family:"book antiqua","times new roman",times;
+	font-size: 1.4em;
+	line-height: 1.4em
 }

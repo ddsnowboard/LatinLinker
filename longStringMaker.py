@@ -1,11 +1,10 @@
 from urllib.request import urlopen
-with open('input.txt', 'r') as f:
-	with open('output.txt', 'w') as o:
-		for i in f:
-			url = urlopen(i)
-			l = list(url)
+while True:
+	with open('input.txt', 'r') as f:
+		with open('output.txt', 'w') as o:
+			l = list(f)
 			for i in range(len(l)):
-				l[i] = str(l[i]).replace('\n', '\\n')
-			for i in l:
-				o.write(repr(i))
-			input('Next...')
+				l[i] = str(l[i]).replace('\n','').replace('\'', r"\'")
+			o.write('\\n'.join(l))
+			if input('Next...') != 'go':
+				break
