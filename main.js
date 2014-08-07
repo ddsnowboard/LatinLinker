@@ -22,4 +22,27 @@ $(document).ready(function () {
 				}
 			}
 	});
+	$("td").click(function() {
+	switch ($(this).html()){
+	case "Aeneid Book I":
+	$("#text").val(AeneidI);
+	break;
+	case "Aeneid Book II":
+	$("#text").val(AeneidII);
+	break;
+	case "Aeneid Book IV":
+	$("#text").val(AeneidIV);
+	break;
+	case "DBG Book I":
+	$("#text").val(DBGI);
+	break;
+	case "DBG Book IV":
+	$("#text").val(DBGIV);
+	break;
+	case "DBG Book VI":
+	$("#text").val(DBGVI);
+	break;
+	}
+	$("#submit").click();
+	});
 });

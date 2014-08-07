@@ -6,19 +6,39 @@
         <link type="text/css" rel="stylesheet" href="style.css" />
         <script src="jquery-2.1.1.min.js"></script>
         <script src="master.js"></script>
+		<script src="texts.js"></script>
         <script src="main.js"></script>
     </head>
     <body>
         <div id="entry">Go to 
-        <a href="http://www.thelatinlibrary.com/" style="color:blue; text-decoration: underline;" target="_blank">The Latin Library</a> and get the text you want, and paste it in here, or you can
-        get it from somewhere else.
-        <br />Then press &quot;Submit.&quot;
+        <a href="http://www.thelatinlibrary.com/" class="normal" target="_blank">The Latin Library</a> and get the text you want,
+        then paste it in here, or you can be lazy and click on one of these links to commonly used texts:
+        <br />
+        <div style="margin-left: auto; margin-right: auto; display: inline-block">
+            <table>
+                <tr>
+                    <th>Vergil</th>
+                    <th>Caesar</th>
+                </tr>
+                <tr>
+                    <td>Aeneid Book I</td>
+                    <td>DBG Book I</td>
+                </tr>
+                <tr>
+                    <td>Aeneid Book II</td>
+                    <td>DBG Book IV</td>
+                </tr>
+                <tr>
+                    <td>Aeneid Book IV</td>
+                    <td>DBG Book VI</td>
+                </tr>
+            </table>
+        </div>
+        <br />Then press &quot;Submit.&quot;, and it will turn all the words into links for you.
         <br />
         <textarea id="text" rows="30" cols="50"></textarea>
         <br />
         <div id="submit" class="button" style="margin-right: auto; margin-left: auto;">Submit</div></div>
-        <div id="text">
-		<table>
-		</table></div>
+        <div id="text"></div>
     </body>
 </html>

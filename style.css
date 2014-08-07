@@ -50,3 +50,19 @@ td {
 	font-size: 1.4em;
 	padding-left: 30px;
 }
+
+.normal {
+	color:blue; 
+	text-decoration: underline;
+}
+
+th {
+	font-size: 1.5em;
+}
+
+td {
+	color:blue; 
+	text-decoration: underline;
+	cursor: pointer;
+	font-size: .8em;
+}
