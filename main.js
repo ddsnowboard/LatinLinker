@@ -43,6 +43,8 @@ $(document).ready(function () {
 		case "DBG Book VI":
 			$("#text").val(DBGVI);
 			break;
+		case "Aeneid Book VI":
+			$("#text").val(AeneidVI);
 		default:
 		console.log($(this).html());
 		}
