@@ -11,7 +11,7 @@ $(document).ready(function () {
 						line.splice(j, 1);
 					} else {
 
-						line[j] = '<a href="http://www.archives.nd.edu/cgi-bin/wordz.pl?keyword=' + line[j] + '" target="_blank">' + line[j] + '</a>';
+						line[j] = '<a class="text" href="http://www.archives.nd.edu/cgi-bin/wordz.pl?keyword=' + line[j] + '" target="_blank">' + line[j] + '</a>';
 					}
 				}
 				text[i] = line.join(' ');
@@ -24,6 +24,7 @@ $(document).ready(function () {
 			}
 	});
 	$("td").click(function () {
+	$("#control").css("visibility", 'visible');
 		switch ($(this).html()) {
 		case "Aeneid Book I":
 			$("#text").val(AeneidI);
@@ -49,5 +50,15 @@ $(document).ready(function () {
 		console.log($(this).html());
 		}
 		$("#submit").click();
+	});
+	$("#light").click(function() {
+		$("html").css("background-color", "white");
+		$("html").css("color", "black");
+		$(".text").css("color","black");
+		});
+	$("#dark").click(function() {
+		$("html").css("background-color", "black");
+		$("html").css("color", "white");
+		$(".text").css("color","white");
 	});
 });

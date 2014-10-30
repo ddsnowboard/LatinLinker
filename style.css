@@ -12,6 +12,9 @@
     cursor:default;
     background: linear-gradient(to bottom right, #C0C0C0 , #888888);
 }
+td {
+	position: relative;
+}
 .hover{
     background: linear-gradient(to bottom right, #B0B0B0, #787878);
 }
@@ -61,8 +64,33 @@ th {
 	font-size: .8em;
 }
 
-td > a {
+.text {
 	font-family:"book antiqua","times new roman",times;
 	font-size: 1.4em;
 	line-height: 1.4em
+}
+
+#control {
+	position: fixed;
+	right: 5px;
+	top: 30%;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	visibility: hidden;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor:default;
+}
+#light {
+	color: white;
+	background-color: black;
+}
+#dark {
+	color: black;
+	background-color: white;
 }
