@@ -54,11 +54,13 @@ $(document).ready(function () {
 	});
 	$("#light").click(function () {
 		$("html").css("background-color", "white");
+		$("#control").css('border', '1px solid black');
 		$("html").css("color", "black");
 		$(".text").css("color", "black");
 	});
 	$("#dark").click(function () {
-		$("html").css("background-color", "black");
+		$("html").css("background-color", "#555555");
+		$("#control").css("border", "1px solid white");
 		$("html").css("color", "white");
 		$(".text").css("color", "white");
 	});
