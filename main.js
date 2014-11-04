@@ -1,3 +1,7 @@
+DARK_TEXT = "black";
+LIGHT_TEXT = "rgb(220,220,220)";
+DARK_BACKGROUND = "#444444";
+LIGHT_BACKGROUND = "rgb(250, 220, 180)";
 $(document).ready(function () {
 	$("#submit").click(function () {
 		var text = $("#text").val().split('\n');
@@ -52,16 +56,21 @@ $(document).ready(function () {
 		}
 		$("#submit").click();
 	});
+	$("#light").css("color", DARK_TEXT);
+	$("#light").css("background-color", LIGHT_BACKGROUND);
+	$("html").css("background-color", LIGHT_BACKGROUND);
+	$("#dark").css("color", LIGHT_TEXT);
+	$("#dark").css("background-color", DARK_BACKGROUND);
 	$("#light").click(function () {
-		$("html").css("background-color", "white");
+		$("html").css("background-color", LIGHT_BACKGROUND);
 		$("#control").css('border', '1px solid black');
-		$("html").css("color", "black");
-		$(".text").css("color", "black");
+		$("html").css("color", DARK_TEXT);
+		$(".text").css("color", DARK_TEXT);
 	});
 	$("#dark").click(function () {
-		$("html").css("background-color", "#555555");
+		$("html").css("background-color", DARK_BACKGROUND);
 		$("#control").css("border", "1px solid white");
-		$("html").css("color", "white");
-		$(".text").css("color", "white");
+		$("html").css("color", LIGHT_TEXT);
+		$(".text").css("color", LIGHT_TEXT);
 	});
 });

@@ -1,3 +1,6 @@
+html {
+	background-color: rgb(250, 220, 180);
+}
 .button {
     border-radius:5px;
     color:#FFFFFF;
@@ -86,9 +89,14 @@ th {
     user-select: none;
     cursor:default;
 }
+#light, #dark {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
 #light {
 	color: black;
-	background-color: white;
+	background-color: rgb(250, 220, 180);
 }
 #dark {
 	color: white;
