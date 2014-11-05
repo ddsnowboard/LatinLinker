@@ -1,7 +1,7 @@
 DARK_TEXT = "black";
 LIGHT_TEXT = "rgb(220,220,220)";
 DARK_BACKGROUND = "#444444";
-LIGHT_BACKGROUND = "rgb(250, 220, 180)";
+LIGHT_BACKGROUND = "rgb(270, 240, 200)";
 $(document).ready(function () {
 	$("#submit").click(function () {
 		var text = $("#text").val().split('\n');

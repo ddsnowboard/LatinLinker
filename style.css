@@ -1,5 +1,5 @@
 html {
-	background-color: rgb(250, 220, 180);
+	background-color: rgb(270, 240, 200);
 }
 .button {
     border-radius:5px;
@@ -96,9 +96,9 @@ th {
 
 #light {
 	color: black;
-	background-color: rgb(250, 220, 180);
+	background-color: rgb(270, 240, 200);
 }
 #dark {
-	color: white;
-	background-color: #555555;
+	color: rgb(220,220,220);
+	background-color: #444444;
 }
