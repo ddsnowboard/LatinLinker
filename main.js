@@ -6,7 +6,6 @@ $(document).ready(function () {
 	$("#submit").click(function () {
 		var text = $("#text").val().split('\n');
 		$("#entry").html('');
-
 		var lineOffset = 1;
 		for (var i = 0; i < text.length; i++) {
 			var line = text[i].split(' ');
@@ -51,11 +50,15 @@ $(document).ready(function () {
 		case "Aeneid Book VI":
 			$("#text").val(AeneidVI);
 			break;
+		case "DBG Book V":
+			$("#text").val(DBGV);
+			break;
 		default:
 			console.log($(this).html());
 		}
 		$("#submit").click();
 	});
+	$("#text").css("margin-right", $("#control").width()+5);
 	$("#light").css("color", DARK_TEXT);
 	$("#light").css("background-color", LIGHT_BACKGROUND);
 	$("html").css("background-color", LIGHT_BACKGROUND);
