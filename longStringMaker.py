@@ -9,7 +9,7 @@ while True:
 		with open('output.txt', 'w') as o:
 			l = list(f)
 			for i in range(len(l)):
-				l[i] = str(l[i]).replace('\n','').replace('\'', r"\'")
+				l[i] = str(l[i]).replace('\n','').replace('\'', r"\'").replace(r'"', r'\"')
 			o.write('\\n'.join(l))
 			if input('Next...').lower() != 'go':
 				break
