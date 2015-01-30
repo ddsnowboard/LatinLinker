@@ -15,7 +15,7 @@ class URLParser(HTMLParser):
 		self.current_tag = []
 		self.open = urlopen(url)
 		self.output_buffer = ""
-		self.feed(r"\\n".join([i.decode("UTF-8").replace("\n", "") for i in self.open if i.decode('UTF-8') != "\n"]))
+		self.feed(r"\n".join([i.decode("UTF-8").replace("\n", "") for i in self.open if i.decode('UTF-8') != "\n"]))
 	def handle_starttag(self, tag, attrs):
 		# Make it prevent pageheads from being included, and try to remove some of the extra newlines. 
 		self.current_tag.append(tag)
