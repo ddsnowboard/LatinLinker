@@ -12,11 +12,12 @@ class URLParser(HTMLParser):
 	def __init__(self, url):
 		HTMLParser.__init__(self)
 		self.url = url
-		self.open = urlopen(url)
-		self.feed(self.open.readlines())
 		self.current_tag = []
+		self.open = urlopen(url)
 		self.output_buffer = ""
-	def handle_starttag(self, tag):
+		self.feed(r"\\n".join([i.decode("UTF-8").replace("\n", "") for i in self.open if i.decode('UTF-8') != "\n"]))
+	def handle_starttag(self, tag, attrs):
+		# Make it prevent pageheads from being included, and try to remove some of the extra newlines. 
 		self.current_tag.append(tag)
 	def handle_endtag(self, tag):
 		for i in range(1, len(self.current_tag)+1):
