@@ -6,8 +6,11 @@ import tkinter as tk
 # Give it input.txt with your paste, and it will give you output.txt with all the newlines
 # escaped and in a single line. You can paste something new into input and type "go" when it's
 # done and it will do it again without having to close, overwriting output.txt. 
+
+# GIVE IT MORE PADDING AND THEN DO THE MANUAL BOX. ALSO, FIX THE ERROR. 
 class URLParser(HTMLParser):
 	def __init__(self, url):
+		HTMLParser.__init__(self)
 		self.url = url
 		self.open = urlopen(url)
 		self.feed(self.open.readlines())
