@@ -12,20 +12,26 @@ class URLParser(HTMLParser):
 	def __init__(self, url):
 		HTMLParser.__init__(self)
 		self.url = url
-		self.current_tag = []
+		self.in_paragraph = False
 		self.open = urlopen(url)
 		self.output_buffer = ""
-		self.feed(r"\n".join([i.decode("UTF-8").replace("\n", "") for i in self.open if i.decode('UTF-8') != "\n"]))
+		self.header = False
+		self.feed(r"\n".join([i.decode("UTF-8").replace("\n", "") for i in self.open if i.decode('UTF-8') != "\n"]).replace('"', r'\"').replace("  ", " ").replace("'", r"\'").replace(r"\n ", " "))
 	def handle_starttag(self, tag, attrs):
 		# Make it prevent pageheads from being included, and try to remove some of the extra newlines. 
-		self.current_tag.append(tag)
+		if dict(attrs).get("class", None) == None and tag == "p":
+			self.in_paragraph = True
+		elif tag == "b" or tag == "strong":
+			self.header = True
 	def handle_endtag(self, tag):
-		for i in range(1, len(self.current_tag)+1):
-			if self.current_tag[-1*i] == tag:
-				self.current_tag.pop(-1*i)
-				break
+		if tag == "p":
+			self.in_paragraph = False
+		elif tag == "b" or tag == "strong":
+			self.header = False
 	def handle_data(self, data):
-		if self.current_tag[-1] == "p":
+		if self.header:
+			self.output_buffer += "<h3>{}</h3>".format(data)
+		elif self.in_paragraph:
 			self.output_buffer += data
 	def output(self):
 		return self.output_buffer
@@ -47,7 +53,7 @@ def parseUrl(url):
 root = tk.Tk()
 frame = URLFrame(root, parseUrl)
 frame.pack()
-
+root.mainloop()
 
 # I'm going to try to make a gui, so this will be unnecessary. 
 # while True:
