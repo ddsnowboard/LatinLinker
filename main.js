@@ -34,7 +34,6 @@ $(document).ready(function () {
 		$("." + author + ":not(.arrow)").parent().hide()
 		$("." + author + ":not(.arrow)").click(function () {
 			$("#text").val(text_groups[this.className][$(this).html()]);
-			console.log(this.innerHTML);
 			$("#submit").click();
 		})
 	}
@@ -64,6 +63,7 @@ $(document).ready(function () {
 				$("#table").append("<tr><td>" + (i + lineOffset).toString() + "</td><td>" + text[i] + '</td></tr>');
 			}
 		}
+		$("#control").css("visibility","visible");
 	});
 	$("#text").css("margin-right", $("#control").width() + 5);
 	$("#light").css("color", DARK_TEXT);

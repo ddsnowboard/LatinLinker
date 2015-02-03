@@ -12,7 +12,7 @@ html {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    cursor:default;
+    cursor: default;
     background: linear-gradient(to bottom right, #C0C0C0 , #888888);
 }
 td {
